@@ -1,15 +1,13 @@
---create a midwifery performance report
---Please show me a count of all outcomes from the consent view against each midwive for every month from march 22
 USE [TestSQL]
 GO
 
 Midwife Name, Month-Year, Count of all the different outcomes in seperate columns so like Yes No Unable to ask etc
 
-SELECT * from [BHTS-RESEARCH2].WHMATERNITY.[dbo].[CernerMaternityEligible_BiB4All]
+SELECT * from [xxxx].xxx.[xxx].[CernerMaternityEligible_BiB4All]
 
 -- CONSENT_GIVEN = Yes, No, Not able to ask, Patient unsure
 
-SELECT * FROM [BHTS-RESEARCH2].WHMATERNITY.[dbo].[CernerAntenatalBookings]
+SELECT * FROM [xxxx].xxx.[xxx].[CernerAntenatalBookings]
 --Named_Midwife
 --Date_of_Booking
 
@@ -24,7 +22,7 @@ SELECT
 		 SUM(CASE WHEN [CONSENT_GIVEN_TO_BE_IN_BIB4ALL_PATIENT] = 'Patient unsure' THEN 1 ELSE 0 END) as Patient_unsure_Count
 
 
-from [BHTS-DATAWH2].[Information].[research].[MATERNITY_REPORT_BIB4ALL_CONSENT] 
+from [xxxx].xxx].[xxx].[MATERNITY_REPORT_BIB4ALL_CONSENT] 
 
 GROUP BY 
 Personnel_First_Completed_Form, 
